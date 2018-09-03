@@ -8,5 +8,5 @@ Created on Fri Aug 10 03:30:13 2018
 total = input("What's the total cost?");
 
 On_Discount = int(total) * .9;
-print("Discount = ",int(total)*.1);
-print("Total = ",int(total)*.9);
+print("Discount = ",int(total)*.1)
+print("Hi")
