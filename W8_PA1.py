@@ -30,7 +30,7 @@ if(n >= m):
         n = n - m
         days += 1
         
-        if(days%6 == 0):
+        if((days+1)%7 == 0):
             if(n < m):
                 print("NO",end="")
                 break;
