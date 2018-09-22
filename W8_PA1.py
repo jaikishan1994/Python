@@ -19,29 +19,27 @@ s = int(s)
 n = int(n)
 m = int(m)
 
-bkp_s = int(s)
+#bkp_s = int(s)
 bkp_n = int(n)
-bkp_m = int(m)
+#bkp_m = int(m)
 
-days = 0
-if(n >= m):
-    ans = 1
-    while(n >= m and days!=s):
-        n = n - m
-        days += 1
-        
-        if((days+1)%7 == 0):
-            if(n < m):
+if(s > 0 and n >= m):
+    pkt = 1
+    days = 1
+    while(1):
+        if(n < m):
+            if((days)%7 == 0):
                 print("NO",end="")
                 break;
-        else:
-            if(n < m):
+            else:
                 n = n + bkp_n
-                ans += 1
-            
+                pkt += 1
+        
+        n = n - m
+        
         if(days == s):
-            print(ans,end="")
+            print(pkt,end="")
             break;
+        days += 1
 else:
     print("NO",end="")
-    
